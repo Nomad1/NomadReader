@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <color name="textColor">#ffffffff</color>
+        <color name="textColorGray">#ffeeeeee</color>
+        <color name="menuTitleColor">#ff798587</color>
+</resources>

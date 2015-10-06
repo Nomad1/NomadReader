@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextView
+	android:textSize="13.0sp"
+	android:textColor="@color/textColor"
+	android:id="@+id/info_item_label"
+	android:layout_width="wrap_content"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" />
+	

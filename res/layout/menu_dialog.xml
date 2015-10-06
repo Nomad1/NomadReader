@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="@drawable/dialog_shape"
+	android:orientation="vertical"
+	android:paddingLeft="0.5dip"
+	android:paddingTop="0.5dip"
+	android:paddingRight="0.5dip"
+	android:paddingBottom="0.5dip"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:id="@+id/backButton"
+		android:background="@drawable/dialog_title_shape"
+		android:layout_height="wrap_content">
+		<LinearLayout
+			android:gravity="center_vertical"
+			android:orientation="horizontal"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10.0dip"
+			android:layout_marginTop="3.0dip"
+			android:layout_marginRight="10.0dip"
+			android:layout_marginBottom="6.0dip">
+			<ImageView
+				android:layout_gravity="top"
+				android:paddingTop="4.0dip"
+				android:paddingRight="10.0dip"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/ic_dialog_menu_generic" />
+			<TextView
+				android:ellipsize="end"
+				android:text="@string/menu"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:singleLine="true"
+				android:textColor="@color/menuTitleColor"
+				android:gravity="center_vertical"
+				android:textSize="18sp"
+				android:typeface="sans"
+				/>
+		</LinearLayout>
+	</LinearLayout>
+	<FrameLayout
+		android:background="#ffdddddd"
+		android:layout_marginTop="1px"
+		android:id="@+id/dialog_content"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/color_hue_image" android:id="@android:id/background"/>
+    <item>     
+        <shape>
+        	<corners android:radius="2dip" />
+            <stroke android:width="1dip" android:color="#ffaaaaaa" />
+            <solid android:color="#00000000"/>
+		</shape>
+    </item>
+</layer-list>

@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+		android:title="@string/check_refresh"
+		android:id="@+id/main_refresh"
+		android:icon="@drawable/ic_menu_refresh" />
+	<item
+		android:title="@string/scan"
+		android:id="@+id/main_scan"
+		android:icon="@drawable/ic_menu_search" />
+	<item
+		android:title="@string/settings"
+		android:id="@+id/main_settings"
+		android:icon="@drawable/ic_menu_preferences" />
+	<item
+		android:title="@string/continue_reading"
+		android:id="@+id/main_continue"
+		android:icon="@drawable/ic_menu_goto" />
+	<item
+		android:title="@string/exit"
+		android:id="@+id/main_exit"
+		android:icon="@drawable/ic_menu_stop" />
+</menu>

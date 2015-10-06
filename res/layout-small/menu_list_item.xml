@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+	android:id="@+id/list_item"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:background="@drawable/menu_button"
+	android:paddingRight="?android:attr/scrollbarSize"
+	android:minHeight="?android:attr/listPreferredItemHeight"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<RelativeLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="1.0"
+		android:layout_gravity="center_vertical"
+		android:layout_marginLeft="5.0dip"
+		android:layout_marginTop="6.0dip"
+		android:layout_marginRight="3.0dip"
+		android:layout_marginBottom="3.0dip">
+		<TextView
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:ellipsize="marquee"
+			android:textColor="@drawable/menu_item_text"
+			android:typeface="sans"
+			android:id="@+id/item_text"
+			android:gravity="center_vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="5dip"
+			android:singleLine="true" />
+		<TextView
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textColor="@drawable/menu_value_text"
+			android:typeface="sans"
+			android:ellipsize="end"
+			android:id="@+id/item_value"
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:layout_below="@id/item_text"
+			android:layout_marginLeft="8.0dip"
+			android:singleLine="true" />
+	</RelativeLayout>
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginRight="4dip">
+		<ImageView
+			android:layout_gravity="center_vertical"
+			android:id="@+id/item_check_image"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="5dip"
+			android:src="@drawable/check_button"
+			android:visibility="invisible" />
+		<ImageView
+			android:layout_gravity="center_vertical"
+			android:id="@+id/item_more_image"
+			android:layout_width="wrap_content"
+			android:src="@drawable/more_button"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="5dip"
+			android:visibility="gone" />
+	</LinearLayout>
+</LinearLayout>

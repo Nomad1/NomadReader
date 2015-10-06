@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fileListItem"
+    android:layout_width="fill_parent"
+    android:layout_height="45dip" >
+    <View
+        android:id="@+id/selectorTopLine"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_alignParentTop="true"
+        android:antialias="false"
+        android:background="@drawable/file_list_selector"
+        android:visibility="visible" />
+    <LinearLayout
+        android:id="@+id/itemBody"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:paddingLeft="10dip"
+            android:singleLine="true"
+            android:textColor="@color/textColor"
+            android:textSize="20.0sp"
+            android:typeface="sans" />
+        <TextView
+            android:id="@+id/item_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:maxLines="1"
+            android:paddingLeft="11.0dip"
+            android:singleLine="true"
+            android:text="Info"
+            android:textColor="@color/textColor"
+            android:textSize="16.0sp"
+            android:typeface="sans" />
+    </LinearLayout>
+    <View
+        android:id="@+id/selectorBottomLine"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:antialias="false"
+        android:background="@drawable/file_list_selector"
+        android:visibility="visible" />
+    <View
+        android:id="@+id/selectorRightLine"
+        android:layout_width="1px"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:antialias="false"
+        android:background="@color/textColor" />
+</RelativeLayout>

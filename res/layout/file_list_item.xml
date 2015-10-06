@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fileListItem"
+    android:layout_width="fill_parent"
+    android:layout_height="45dip" >
+    <View
+        android:id="@+id/selectorTopLine"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_alignParentTop="true"
+        android:antialias="false"
+        android:background="@drawable/file_list_selector"
+        android:visibility="visible" />
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:paddingTop="3dip"
+        android:paddingLeft="15dip"
+        android:singleLine="true"
+        android:text="Title"
+        android:textColor="@color/textColor"
+        android:textSize="19.0sp"
+        android:typeface="sans" />
+    <TextView
+        android:id="@+id/item_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_name"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:maxLines="1"
+        android:paddingLeft="16.0dip"
+        android:singleLine="true"
+        android:layout_marginTop="-4dip"
+        android:text="Info"
+        android:textColor="@color/textColor"
+        android:textSize="14.0sp"
+        android:typeface="sans" />
+    <View
+        android:id="@+id/selectorBottomLine"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:antialias="false"
+        android:background="@drawable/file_list_selector"
+        android:visibility="visible" />
+    <View
+        android:id="@+id/selectorRightLine"
+        android:layout_width="1px"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:antialias="false"
+        android:background="@color/textColor" />
+</RelativeLayout>

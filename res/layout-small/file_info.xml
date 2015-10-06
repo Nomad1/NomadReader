@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <ScrollView
+        android:id="@+id/info_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1.0" >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip" >
+            <TextView
+                android:id="@+id/details_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:textSize="20.0sp" />
+            <TextView
+                android:id="@+id/details_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:textSize="15.0sp" />
+            <TextView
+                android:id="@+id/details_series"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="top"
+                android:textColor="@color/textColor"
+                android:textSize="15.0sp" />
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+                <TextView
+                    android:id="@+id/details_annotation_start"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal"
+                    android:gravity="fill_horizontal"
+                    android:textColor="@color/textColorGray"
+                    android:textSize="14.0sp" />
+                <ImageView
+                    android:id="@+id/details_cover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right"
+                    android:gravity="top|right"
+                    android:padding="3dip" />
+            </FrameLayout>
+            <ImageView
+                android:id="@+id/details_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:paddingBottom="5dip"
+                android:paddingTop="5dip"
+                android:src="@drawable/divider" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#ff888888" />
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#20fffff0" >
+            <LinearLayout
+                android:id="@+id/info_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:orientation="vertical"
+                android:paddingLeft="10dip"
+                android:paddingTop="1dip" />
+            <!--
+                ImageButton
+				android:layout_gravity="left|top"
+				android:id="@+id/info_more"
+				android:background="@drawable/info_more"
+				android:layout_marginLeft="2dip"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" /
+            -->
+            <Button
+                android:id="@+id/details_open"
+				android:layout_width="wrap_content"
+				android:paddingLeft="5dip"
+				android:paddingRight="5dip"
+                android:layout_height="20dip"
+                android:layout_gravity="right|top"
+                android:layout_marginRight="3dip"
+                android:background="@drawable/button"
+                android:gravity="center"
+                android:text="@string/open"
+                android:textColor="#ff000000" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

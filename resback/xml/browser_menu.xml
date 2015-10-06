@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <!--menu id="@+id/library_main_menu">
+        <item id="@+id/main_refresh" title="@string/check_refresh" />
+        <item id="@+id/main_scan" title="@string/scan" />
+        <item id="@+id/main_settings" target="@+id/settings_menu" title="@string/settings" />
+        <item id="@+id/main_continue" title="@string/continue_reading" />
+    </menu-->
+    <menu id="@+id/settings_menu">
+        <item id="@+id/show_sort" target="@+id/sort_menu" title="@string/sort" />
+        <item id="@+id/show_show" target="@+id/show_menu" title="@string/filter" />
+        <item id="@+id/show_hidden" target="@+id/hidden_menu" title="@string/hidden_files" />
+        <item id="@+id/show_empty" target="@+id/empty_menu" title="@string/empty_folders" />
+        <item id="@+id/save_thumbs" target="@+id/thumbs_menu" title="@string/thumbs" />
+    </menu>
+    <menu id="@+id/sort_menu">
+        <item id="@+id/sort_title" title="@string/title" />
+        <item id="@+id/sort_most_recent" title="@string/most_recent" />
+        <item id="@+id/sort_author" title="@string/author" />
+        <item id="@+id/sort_series" title="@string/series" />
+    </menu>
+    <menu id="@+id/show_menu">
+        <item id="@+id/show_all" title="@string/all_files"/>
+        <item id="@+id/show_documents" title="@string/documents_only"/>
+        <item id="@+id/show_books" title="@string/books_only"/>
+    </menu>
+    <menu id="@+id/hidden_menu">
+        <item id="@+id/hidden_show" title="@string/show"/>
+        <item id="@+id/hidden_hide" title="@string/hide"/>
+    </menu>
+    <menu id="@+id/empty_menu">
+        <item id="@+id/empty_show" title="@string/show"/>
+        <item id="@+id/empty_hide" title="@string/hide"/>
+    </menu>
+    <menu id="@+id/thumbs_menu">
+        <item id="@+id/thumbs_internal" title="@string/thumbs_internal" />
+        <item id="@+id/thumbs_external" title="@string/thumbs_external" />
+        <item id="@+id/thumbs_near" title="@string/thumbs_near" />
+    </menu>
+</menu>

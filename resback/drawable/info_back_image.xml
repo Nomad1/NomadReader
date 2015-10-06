@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bitmap
+	android:src="@drawable/info_background"
+	android:dither="true"
+	xmlns:android="http://schemas.android.com/apk/res/android" />
