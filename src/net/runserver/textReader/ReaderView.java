@@ -43,6 +43,8 @@ import net.runserver.common.Pair;
 import net.runserver.common.SortedList;
 
 public class ReaderView extends View {
+    private static final int HEADER_FONT_SIZE = Dips.spToPx(10);
+
     private static final String[] s_superscriptNumbers = { " ¹", " ²", " ³", " \u2074" };
 
     public static final int ORIENTATION_NORMAL = 0;
@@ -349,8 +351,8 @@ public class ReaderView extends View {
         m_orientation = orientation;
 
         if (m_headPaint != null && m_header > 0) {
-            m_headPaint.setTextSize((int) (m_header / 1.8f));
-            m_systemPaint.setTextSize((int) (m_header / 1.8f));
+            m_headPaint.setTextSize(HEADER_FONT_SIZE);
+            m_systemPaint.setTextSize(HEADER_FONT_SIZE);
         }
 
         if (m_dateFormat != null && m_systemPaint != null)
@@ -466,7 +468,7 @@ public class ReaderView extends View {
             m_systemPaint.setColor(inverse ? Color.WHITE : Color.BLACK);
 
             m_pagePaint = new TextPaint(m_systemPaint);
-            m_pagePaint.setTextSize(14);
+            m_pagePaint.setTextSize(Dips.spToPx(9));
             m_pagePaint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.NORMAL));
             m_pagePaint.setColor(textColor);
 
@@ -502,7 +504,7 @@ public class ReaderView extends View {
 
             m_headPaint = new TextPaint(m_systemPaint);
             m_headPaint.setTextAlign(Align.LEFT);
-            m_headPaint.setTextSize(18);
+            m_headPaint.setTextSize(HEADER_FONT_SIZE);
             m_headPaint.setTypeface(Typeface.create(Typeface.SANS_SERIF, Typeface.BOLD));
             m_headPaint.setAlpha(255);
 
@@ -526,7 +528,7 @@ public class ReaderView extends View {
         m_orientation = orientation;
 
         if (m_header > 0) {
-            m_headPaint.setTextSize((int) (m_header / 1.8f));
+            m_headPaint.setTextSize(HEADER_FONT_SIZE);
             m_systemPaint.setTextSize((int) (m_header / 1.8f));
         }
 
@@ -694,7 +696,7 @@ public class ReaderView extends View {
             if (!BaseActivity.isBiDirStringSupported && FontStyle.isRTL(rtitle))
                 rtitle = FontStyle.reverseString(rtitle);
 
-            canvas.drawText(rtitle, 15, m_header - (m_header + m_headPaint.getTextSize()) / 5, m_headPaint);
+            canvas.drawText(rtitle, Dips.dpToPx(4), m_header - Dips.dpToPx(3), m_headPaint);
 
             canvas.drawRect(0, m_header - 1, width, m_header, m_systemPaint);
         }
