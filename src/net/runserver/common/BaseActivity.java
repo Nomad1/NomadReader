@@ -1,6 +1,5 @@
 package net.runserver.common;
 
-import net.runserver.textReader.R;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +12,7 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
+import net.runserver.textReader.R;
 
 public class BaseActivity extends Activity
 {
@@ -59,8 +59,8 @@ public class BaseActivity extends Activity
 	
 	public void terminate()
 	{
-//		finish();
-		android.os.Process.killProcess(android.os.Process.myPid());
+        finish();
+        // android.os.Process.killProcess(android.os.Process.myPid());
 	}
 
 	public static abstract class ResultRunnable implements Runnable
@@ -231,7 +231,8 @@ public class BaseActivity extends Activity
 		aquireLocks();
 	}	
 	
-	public void onUserInteraction()
+	@Override
+    public void onUserInteraction()
 	{
 		super.onUserInteraction();
 		//Log.d(m_appName, "OnUserInteraction");
