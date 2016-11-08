@@ -6,11 +6,10 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
 import android.graphics.Color;
 import android.graphics.Rect;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.GradientDrawable.Orientation;
 import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.ShapeDrawable;
-import android.graphics.drawable.GradientDrawable.Orientation;
 import android.graphics.drawable.shapes.Shape;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
@@ -19,8 +18,8 @@ import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.widget.Button;
 import android.widget.SeekBar;
-import android.widget.TextView;
 import android.widget.SeekBar.OnSeekBarChangeListener;
+import android.widget.TextView;
 
 public class ColorMenu implements OnTouchListener, OnSeekBarChangeListener, OnClickListener
 {
@@ -115,10 +114,13 @@ public class ColorMenu implements OnTouchListener, OnSeekBarChangeListener, OnCl
 		m_radioBack = (Button) m_colorMenu.findViewById(R.id.button_back);
 		m_radioBack.setOnClickListener(this);
 		
-		ShapeDrawable hueDrawable = (ShapeDrawable) ((LayerDrawable)m_hueSlider.getProgressDrawable()).findDrawableByLayerId(android.R.id.background);		
-		CustomShapeDrawable hueCustomShape = new CustomShapeDrawable(hueDrawable.getShape());
-		hueCustomShape.setBitmap(((BitmapDrawable)context.getResources().getDrawable(R.drawable.color_hue_image)).getBitmap());
-		((LayerDrawable)m_hueSlider.getProgressDrawable()).setDrawableByLayerId(android.R.id.background, hueCustomShape);
+        // ShapeDrawable hueDrawable = (ShapeDrawable)
+        // ((LayerDrawable)m_hueSlider.getProgressDrawable()).findDrawableByLayerId(android.R.id.background);
+        // CustomShapeDrawable hueCustomShape = new
+        // CustomShapeDrawable(hueDrawable.getShape());
+        // hueCustomShape.setBitmap(((BitmapDrawable)context.getResources().getDrawable(R.drawable.color_hue_image)).getBitmap());
+        // ((LayerDrawable)m_hueSlider.getProgressDrawable()).setDrawableByLayerId(android.R.id.background,
+        // hueCustomShape);
 		
 		/*ShapeDrawable lightDrawable = (ShapeDrawable) ((LayerDrawable)m_lightSlider.getProgressDrawable()).findDrawableByLayerId(android.R.id.background);		
 		CustomShapeDrawable lightCustomShape = new CustomShapeDrawable(lightDrawable.getShape());

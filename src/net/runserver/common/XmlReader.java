@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 
-import org.apache.http.util.EncodingUtils;
-
 import android.content.res.XmlResourceParser;
 
 public class XmlReader
@@ -152,7 +150,7 @@ public class XmlReader
 	
 	public CharSequence getAttributeValue(String namespace, String name)
 	{
-		return getAttribute(EncodingUtils.getAsciiBytes(name));
+        return getAttribute(name.getBytes());
 	}
 
 	public XmlReader(InputStream stream, int length)// throws IOException
