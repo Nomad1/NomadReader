@@ -78,7 +78,6 @@
                 android:paddingTop="5dip"
                 android:src="@drawable/divider" />
             
-             <include layout="@layout/ads"/>
         </LinearLayout>
     </ScrollView>
 

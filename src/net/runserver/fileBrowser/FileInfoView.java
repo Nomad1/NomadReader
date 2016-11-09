@@ -7,10 +7,8 @@ import java.util.List;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
-import android.net.Uri;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
@@ -73,11 +71,6 @@ public class FileInfoView extends LinearLayout implements OnClickListener
 		m_clickListener = value;
 	}
 
-    public static void open(Context a, String url) {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        browserIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        a.startActivity(browserIntent);
-    }
 
     public FileInfoView(final Context context, ViewGroup parent)
 	{
@@ -86,17 +79,6 @@ public class FileInfoView extends LinearLayout implements OnClickListener
 		m_inflater = LayoutInflater.from(context);
 		m_inflater.inflate(R.layout.file_info, this);
 
-        findViewById(R.id.proADS).setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                try {
-                    open(context.getApplicationContext(), "market://details?id=com.foobnix.pdf.reader");
-                } catch (Exception e) {
-                    open(context.getApplicationContext(), "https://play.google.com/store/apps/details?id=com.foobnix.pdf.reader");
-                }
-            }
-        });
 
 		m_infoList = (LinearLayout) findViewById(R.id.info_items);
 		//m_moreButton = (ImageButton) findViewById(R.id.info_more);

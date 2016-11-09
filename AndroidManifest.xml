@@ -1,65 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	package="net.runserver.textReader"
-	android:versionCode="1113"
-	android:versionName="0.12.3-Lirbi">
-	
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    
-	<application
-	    android:allowBackup="true"
-		android:icon="@drawable/icon"
-		android:largeHeap="true"
-		android:label="@string/app_name">
-		<activity
-			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-			android:configChanges="locale|orientation"
-			android:name=".TextReader"
-			android:launchMode="singleInstance"
-			android:label="@string/app_name">
-			<intent-filter>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.runserver.textReader"
+    android:versionCode="1113"
+    android:versionName="0.12.4-LirbiEdition" >
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <uses-sdk
+        android:minSdkVersion="3"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true" >
+        <activity
+            android:name=".TextReader"
+            android:configChanges="locale|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:host="" android:scheme="file" />
-                <data android:mimeType="application/epub+zip"/>
-                <data android:mimeType="application/epub"/>
-                <data android:mimeType="application/fb2"/>
-                <data android:mimeType="application/fb2.zip"/>
-                <data android:mimeType="application/fb2+zip"/>
-				<data android:mimeType="application/x-fictionbook+xml" />
-				<data android:mimeType="application/x-fictionbook" />
-				<data android:mimeType="application/x-fb2" />
-				<data android:mimeType="application/zip" />
-				<data android:mimeType="application/x-zip-compressed" />
-				<data android:mimeType="application/x-compressed-zip" />
-				<data android:mimeType="application/x-fictionbook+zip" />
-                <data android:mimeType="text/html"/>
-			</intent-filter>
-			<intent-filter>
-				<action android:name="android.intent.action.VIEW" />
-				<category android:name="android.intent.category.DEFAULT" />
-				<data android:host="" android:scheme="file" />
-				<data android:pathPattern=".*\\.epub" />
-				<data android:pathPattern=".*\\.fb2" />
-				<data android:pathPattern=".*\\.fb2\\.zip" />
-				<data android:pathPattern=".*\\.zip" />
-			</intent-filter>
-		</activity>
-		<activity
-			android:theme="@android:style/Theme.Light.NoTitleBar"
-			android:configChanges="locale"
-			android:launchMode="singleInstance"
-			android:name="net.runserver.fileBrowser.FileBrowser">
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-				<category android:name="android.intent.category.LAUNCHER" />
-			</intent-filter>
-		</activity>
-	</application>
-	
-	<uses-sdk
-		android:minSdkVersion="3"
-		android:targetSdkVersion="21" />
-	
-</manifest> 
+
+                <data
+                    android:host=""
+                    android:scheme="file" />
+                <data android:mimeType="application/epub+zip" />
+                <data android:mimeType="application/epub" />
+                <data android:mimeType="application/fb2" />
+                <data android:mimeType="application/fb2.zip" />
+                <data android:mimeType="application/fb2+zip" />
+                <data android:mimeType="application/x-fictionbook+xml" />
+                <data android:mimeType="application/x-fictionbook" />
+                <data android:mimeType="application/x-fb2" />
+                <data android:mimeType="application/zip" />
+                <data android:mimeType="application/x-zip-compressed" />
+                <data android:mimeType="application/x-compressed-zip" />
+                <data android:mimeType="application/x-fictionbook+zip" />
+                <data android:mimeType="text/html" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host=""
+                    android:scheme="file" />
+                <data android:pathPattern=".*\\.epub" />
+                <data android:pathPattern=".*\\.fb2" />
+                <data android:pathPattern=".*\\.fb2\\.zip" />
+                <data android:pathPattern=".*\\.zip" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="net.runserver.fileBrowser.FileBrowser"
+            android:configChanges="locale"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
