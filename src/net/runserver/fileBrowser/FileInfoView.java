@@ -5,14 +5,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.runserver.bookRenderer.HypenateManager;
-import net.runserver.common.BaseActivity;
-import net.runserver.common.FixedCharSequence;
-import net.runserver.library.FileInfo;
-import net.runserver.library.Utils;
-import net.runserver.library.metaData.MetaData;
-import net.runserver.library.metaData.MetaDataFactory;
-import net.runserver.textReader.R;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -35,6 +27,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import net.runserver.bookRenderer.HypenateManager;
+import net.runserver.common.BaseActivity;
+import net.runserver.common.FixedCharSequence;
+import net.runserver.library.FileInfo;
+import net.runserver.library.Utils;
+import net.runserver.library.metaData.MetaData;
+import net.runserver.library.metaData.MetaDataFactory;
+import net.runserver.textReader.R;
 
 public class FileInfoView extends LinearLayout implements OnClickListener
 {
@@ -65,17 +65,20 @@ public class FileInfoView extends LinearLayout implements OnClickListener
 		return m_currentInfo;
 	}
 
-	public void setOnClickListener(OnClickListener value)
+	@Override
+    public void setOnClickListener(OnClickListener value)
 	{
 		m_clickListener = value;
 	}
 
-	public FileInfoView(Context context, ViewGroup parent)
+
+    public FileInfoView(final Context context, ViewGroup parent)
 	{
 		super(context);
 
 		m_inflater = LayoutInflater.from(context);
 		m_inflater.inflate(R.layout.file_info, this);
+
 
 		m_infoList = (LinearLayout) findViewById(R.id.info_items);
 		//m_moreButton = (ImageButton) findViewById(R.id.info_more);

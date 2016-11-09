@@ -1,8 +1,7 @@
 package net.runserver.common;
 
+import java.io.UnsupportedEncodingException;
 import java.nio.CharBuffer;
-
-import org.apache.http.util.EncodingUtils;
 
 import android.util.Log;
 
@@ -17,7 +16,12 @@ public abstract class CustomCharset
 		
 		Log.d("TextReader", "Processing string " + str);
 		
-		byte [] bytes = EncodingUtils.getBytes(str, "UTF-7");
+        byte[] bytes;
+        try {
+            bytes = str.getBytes("UTF-7");
+        } catch (UnsupportedEncodingException e) {
+            bytes = str.getBytes();
+        }
 		return decode(bytes, 0, bytes.length).toString();
 	}
 }
