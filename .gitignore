@@ -17,6 +17,9 @@ bld/
 [Oo]bj/
 gen/
 resback/
+apk/
+bin/
+.settings/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
